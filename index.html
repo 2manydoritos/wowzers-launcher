@@ -3,13 +3,17 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="UTF-8">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <style>
 
 @font-face {
   font-family: 'HeaderFont';
   src: url('header.woff') format('woff'),
        url('header.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BodyFont';
+  src: url('body.ttf') format('truetype');
 }
 
 html, body {
@@ -20,7 +24,7 @@ html, body {
 
 body {
   background: url('bg.jpg') center/cover no-repeat, #2b1d10;
-  font-family: 'Cinzel', Georgia, serif;
+  font-family: 'BodyFont', Georgia, serif;
   color: #e8d9b0;
   padding: 28px;
   box-sizing: border-box;
@@ -44,7 +48,7 @@ body::before {
 }
 
 h1 {
-  font-family: 'HeaderFont', 'Cinzel Decorative', Georgia, serif;
+  font-family: 'HeaderFont', Georgia, serif;
   font-size: 34px;
   color: #f0c975;
   text-shadow: 0 0 8px rgba(240, 201, 117, 0.4), 1px 1px 2px #000;
@@ -53,7 +57,7 @@ h1 {
 }
 
 .sub {
-  font-family: 'HeaderFont', 'Cinzel Decorative', Georgia, serif;
+  font-family: 'HeaderFont', Georgia, serif;
   font-size: 16px;
   color: #b89a63;
   letter-spacing: 2px;
@@ -74,7 +78,7 @@ hr {
 }
 
 .info b {
-  font-family: 'HeaderFont', 'Cinzel Decorative', Georgia, serif;
+  font-family: 'HeaderFont', Georgia, serif;
   color: #f0c975;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -86,7 +90,7 @@ hr {
 }
 
 a {
-  font-family: 'HeaderFont', 'Cinzel Decorative', Georgia, serif;
+  font-family: 'HeaderFont', Georgia, serif;
   color: #f0c975;
   text-decoration: none;
   border-bottom: 1px dotted #a8863f;
