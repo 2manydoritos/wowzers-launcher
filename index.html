@@ -15,11 +15,19 @@
     /* Placeholder background - swap this whole line out for:
        background: url('bg.jpg') center/cover no-repeat, #2b1d10;
        once you've uploaded a real image to the repo. */
-    background: radial-gradient(ellipse at center, #4a3420 0%, #2b1d10 100%);
+    background: url('bg.jpg') center/cover no-repeat, #2b1d10;
     font-family: 'Cinzel', Georgia, serif;
     color: #e8d9b0;
     padding: 28px;
     box-sizing: border-box;
+  }
+  
+  body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
   }
 
   /* the info panel: no border, just a soft dark rounded card so it reads
