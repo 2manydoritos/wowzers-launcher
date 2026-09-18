@@ -9,29 +9,28 @@
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #2b1d10;
   }
 
   body {
-    /* Base color, plus a subtle grain texture generated with an inline SVG filter -
-       no external image needed. Swap this whole background block out for
-       background: url('your-image.jpg') center/cover no-repeat;
-       once you have a real texture uploaded to the repo. */
-    background-image:
-      radial-gradient(ellipse at center, #4a3420 0%, #2b1d10 100%),
-      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/></svg>");
+    /* Placeholder background - swap this whole line out for:
+       background: url('bg.jpg') center/cover no-repeat, #2b1d10;
+       once you've uploaded a real image to the repo. */
+    background: radial-gradient(ellipse at center, #4a3420 0%, #2b1d10 100%);
     font-family: 'Cinzel', Georgia, serif;
     color: #e8d9b0;
     padding: 28px;
     box-sizing: border-box;
   }
 
+  /* the info panel: no border, just a soft dark rounded card so it reads
+     clearly over whatever's behind it */
   .frame {
-    border: 2px solid #a8863f;
-    border-radius: 4px;
+    display: inline-block;
+    max-width: 420px;
+    border-radius: 10px;
     padding: 24px 28px;
-    background: rgba(20, 14, 8, 0.55);
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.4), inset 0 0 30px rgba(0,0,0,0.5);
+    background: rgba(15, 10, 6, 0.62);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
   }
 
   h1 {
@@ -53,48 +52,3 @@
 
   hr {
     border: none;
-    border-top: 1px solid #6b4f28;
-    box-shadow: 0 1px 0 rgba(255,255,255,0.05);
-    margin-bottom: 20px;
-  }
-
-  .info p {
-    font-size: 15px;
-    line-height: 1.8;
-    margin: 6px 0;
-  }
-
-  .info b {
-    color: #f0c975;
-    font-weight: 600;
-  }
-
-  .status {
-    color: #7fbf5f;
-    font-weight: 600;
-  }
-
-  a {
-    color: #f0c975;
-    text-decoration: none;
-    border-bottom: 1px dotted #a8863f;
-  }
-  a:hover {
-    color: #ffdf9a;
-  }
-</style>
-</head>
-<body>
-  <div class="frame">
-    <h1>Wowzers</h1>
-    <div class="sub">3.3.5a &nbsp;&middot;&nbsp; AzerothCore</div>
-    <hr>
-    <div class="info">
-      <p><b>Realm:</b> 99.98.204.42</p>
-      <p><b>Status:</b> <span class="status">Online</span></p>
-      <p>Welcome! Join the Discord for updates and patch notes.</p>
-      <p><a href="https://discord.gg/5Afw2WMg4">Discord</a></p>
-    </div>
-  </div>
-</body>
-</html>
