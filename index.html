@@ -3,50 +3,98 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  body {
+  html, body {
     margin: 0;
-    padding: 24px;
-    background: #f4ecd8;
-    font-family: Georgia, "Times New Roman", serif;
-    color: #2b2b2b;
+    padding: 0;
+    height: 100%;
+    background-color: #2b1d10;
   }
+
+  body {
+    /* Base color, plus a subtle grain texture generated with an inline SVG filter -
+       no external image needed. Swap this whole background block out for
+       background: url('your-image.jpg') center/cover no-repeat;
+       once you have a real texture uploaded to the repo. */
+    background-image:
+      radial-gradient(ellipse at center, #4a3420 0%, #2b1d10 100%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/></svg>");
+    font-family: 'Cinzel', Georgia, serif;
+    color: #e8d9b0;
+    padding: 28px;
+    box-sizing: border-box;
+  }
+
+  .frame {
+    border: 2px solid #a8863f;
+    border-radius: 4px;
+    padding: 24px 28px;
+    background: rgba(20, 14, 8, 0.55);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.4), inset 0 0 30px rgba(0,0,0,0.5);
+  }
+
   h1 {
-    color: #6b1d1d;
-    font-size: 28px;
-    margin-bottom: 4px;
+    font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
+    font-size: 34px;
+    color: #f0c975;
+    text-shadow: 0 0 8px rgba(240, 201, 117, 0.4), 1px 1px 2px #000;
+    margin: 0 0 2px 0;
+    letter-spacing: 1px;
   }
+
   .sub {
-    color: #7a6a4f;
     font-size: 13px;
-    margin-bottom: 20px;
+    color: #b89a63;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
   }
+
   hr {
     border: none;
-    border-top: 1px solid #b8a97a;
+    border-top: 1px solid #6b4f28;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.05);
     margin-bottom: 20px;
   }
-  .info {
-    font-size: 14px;
-    line-height: 1.6;
+
+  .info p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 6px 0;
   }
+
   .info b {
-    color: #6b1d1d;
+    color: #f0c975;
+    font-weight: 600;
   }
+
+  .status {
+    color: #7fbf5f;
+    font-weight: 600;
+  }
+
   a {
-    color: #6b1d1d;
+    color: #f0c975;
+    text-decoration: none;
+    border-bottom: 1px dotted #a8863f;
+  }
+  a:hover {
+    color: #ffdf9a;
   }
 </style>
 </head>
 <body>
-  <h1>Wowzers</h1>
-  <div class="sub">3.3.5a &middot; AzerothCore</div>
-  <hr>
-  <div class="info">
-    <p><b>Realm:</b> 99.98.204.42</p>
-    <p><b>Status:</b> Online</p>
-    <p>Welcome! Join the Discord for updates and patch notes.</p>
-    <p><a href="https://discord.gg/https://discord.gg/5Afw2WMg4">Discord</a></p>
+  <div class="frame">
+    <h1>Wowzers</h1>
+    <div class="sub">3.3.5a &nbsp;&middot;&nbsp; AzerothCore</div>
+    <hr>
+    <div class="info">
+      <p><b>Realm:</b> 99.98.204.42</p>
+      <p><b>Status:</b> <span class="status">Online</span></p>
+      <p>Welcome! Join the Discord for updates and patch notes.</p>
+      <p><a href="https://discord.gg/5Afw2WMg4">Discord</a></p>
+    </div>
   </div>
 </body>
 </html>
