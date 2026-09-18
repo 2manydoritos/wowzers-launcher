@@ -6,95 +6,94 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
 <style>
 
- @font-face {
+@font-face {
   font-family: 'HeaderFont';
   src: url('header.woff') format('woff'),
        url('header.ttf') format('truetype');
-  }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+}
 
-  body {
-    /* Placeholder background - swap this whole line out for:
-       background: url('bg.jpg') center/cover no-repeat, #2b1d10;
-       once you've uploaded a real image to the repo. */
-    background: url('bg.jpg') center/cover no-repeat, #2b1d10;
-    font-family: 'Cinzel', Georgia, serif;
-    color: #e8d9b0;
-    padding: 28px;
-    box-sizing: border-box;
-  }
-  
-  body::before {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: url('bg.jpg') center/cover no-repeat, #2b1d10;
+  font-family: 'Cinzel', Georgia, serif;
+  color: #e8d9b0;
+  padding: 28px;
+  box-sizing: border-box;
+}
+
+body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.45);
   z-index: 0;
-  }
+}
 
-  /* the info panel: no border, just a soft dark rounded card so it reads
-     clearly over whatever's behind it */
-  .frame {
-    display: inline-block;
-    max-width: 420px;
-    border-radius: 10px;
-    padding: 24px 28px;
-    background: rgba(15, 10, 6, 0.62);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
-  }
+.frame {
+  display: inline-block;
+  max-width: 420px;
+  border-radius: 10px;
+  padding: 24px 28px;
+  background: rgba(15, 10, 6, 0.62);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
 
-  h1 {
-    font-family: 'HeaderFont', 'Cinzel Decorative', Georgia, serif;
-    font-size: 34px;
-    color: #f0c975;
-    text-shadow: 0 0 8px rgba(240, 201, 117, 0.4), 1px 1px 2px #000;
-    margin: 0 0 2px 0;
-    letter-spacing: 1px;
-  }
+h1 {
+  font-family: 'HeaderFont', 'Cinzel Decorative', Georgia, serif;
+  font-size: 34px;
+  color: #f0c975;
+  text-shadow: 0 0 8px rgba(240, 201, 117, 0.4), 1px 1px 2px #000;
+  margin: 0 0 2px 0;
+  letter-spacing: 1px;
+}
 
-  .sub {
-    font-size: 13px;
-    color: #b89a63;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-  }
+.sub {
+  font-family: 'HeaderFont', 'Cinzel Decorative', Georgia, serif;
+  font-size: 16px;
+  color: #b89a63;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
 
-  hr {
-    border: none;
-    border-top: 1px solid rgba(184, 154, 99, 0.35);
-    margin-bottom: 20px;
-  }
+hr {
+  border: none;
+  border-top: 1px solid rgba(184, 154, 99, 0.35);
+  margin-bottom: 20px;
+}
 
-  .info p {
-    font-size: 15px;
-    line-height: 1.8;
-    margin: 6px 0;
-  }
+.info p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 6px 0;
+}
 
-  .info b {
-    color: #f0c975;
-    font-weight: 600;
-  }
+.info b {
+  font-family: 'HeaderFont', 'Cinzel Decorative', Georgia, serif;
+  color: #f0c975;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
 
-  .status {
-    color: #7fbf5f;
-    font-weight: 600;
-  }
+.status {
+  color: #7fbf5f;
+  font-weight: 600;
+}
 
-  a {
-    color: #f0c975;
-    text-decoration: none;
-    border-bottom: 1px dotted #a8863f;
-  }
-  a:hover {
-    color: #ffdf9a;
-  }
+a {
+  font-family: 'HeaderFont', 'Cinzel Decorative', Georgia, serif;
+  color: #f0c975;
+  text-decoration: none;
+  border-bottom: 1px dotted #a8863f;
+}
+a:hover {
+  color: #ffdf9a;
+}
 </style>
 </head>
 <body>
