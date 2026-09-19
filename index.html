@@ -23,11 +23,24 @@ html, body {
 }
 
 body {
-  background: url('bg.jpg') center/cover no-repeat, #2b1d10;
+  /* Removed bg.jpg - kept the dark backup color */
+  background-color: #2b1d10; 
   font-family: 'HeaderFont', Georgia, serif;
   color: #e8d9b0;
   padding: 28px;
   box-sizing: border-box;
+}
+
+/* New styling for the background video loop */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;         /* Kept furthest back */
+  pointer-events: none;
 }
 
 body::before {
@@ -35,10 +48,12 @@ body::before {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.18);
-  z-index: 0;
+  z-index: -1;         /* Sits directly on top of the video to dim it */
 }
 
 .frame {
+  position: relative;  /* Allows z-index alignment */
+  z-index: 1;          /* Keeps your text card securely on top */
   display: inline-block;
   max-width: 420px;
   border-radius: 10px;
@@ -101,6 +116,12 @@ a:hover {
 </style>
 </head>
 <body>
+
+  <!-- Background video loops natively right beneath the overlay -->
+  <video autoplay loop muted playsinline id="bg-video">
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+
   <div class="frame">
     <h1>Wowzers</h1>
     <div class="sub">3.3.5a &nbsp;&middot;&nbsp; AzerothCore</div>
@@ -111,5 +132,6 @@ a:hover {
       <p><a href="https://discord.gg/5Afw2WMg4">Discord</a></p>
     </div>
   </div>
+
 </body>
 </html>
